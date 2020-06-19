@@ -1,0 +1,11 @@
+{
+    "name": "php-interface",
+    "require": {
+        "php": ">=7.3.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
