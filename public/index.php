@@ -1,14 +1,12 @@
 <?php
 require __DIR__.'/../vendor/autoload.php';
-use App\Test\InitialClass;
+use App\Library\Developer;
 
-$totalExpanded  = new InitialClass('12.50');
+$doing = new Developer();
 
-$totalExpanded->setName('Mr.Sam');
-var_dump($totalExpanded->name);
-
-$totalExpanded->setFee('12');
-var_dump($totalExpanded->getFee());
-
-
-
+var_dump($doing->coding());
+var_dump($doing->mobile());
+var_dump($doing->symfonyInstallation());
+var_dump($doing->laravelInstallation());
+var_dump($doing->getDefault());
+var_dump($doing->DefaultJavascript());
