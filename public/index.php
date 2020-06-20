@@ -1,21 +1,17 @@
 <?php
 require __DIR__.'/../vendor/autoload.php';
 
-use App\Database;
-use App\Test\InitialClass;
+$numbers = [1,2,3,4,5];
 
+//Loop solution
+$new_val_by_loop= [];
+foreach ($numbers as $number){
+    $new_val_by_loop[] = $number * 5;
+}
+var_dump($new_val_by_loop);
 
-$db = new Database();
-
-$totalExpanded  = new InitialClass('12.50');
-
-$totalExpanded->setName('Mr.Sam');
-var_dump($totalExpanded->name);
-
-$totalExpanded->setFee('12');
-var_dump($totalExpanded->getFee());
-
-var_dump($db);
-
-
-
+//Array map solution
+$new_val_by_array_map = array_map(function ($data){
+    return $data * 5;
+}, $numbers);
+var_dump($new_val_by_array_map);
