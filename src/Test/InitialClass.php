@@ -3,7 +3,7 @@
 class InitialClass
 {
     public $name;
-    private $fee;
+    protected $fee;
 
     public function __construct($fee)
     {
