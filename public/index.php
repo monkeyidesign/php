@@ -1,21 +1,16 @@
-<?php
-require __DIR__.'/../vendor/autoload.php';
+<?php require __DIR__.'/../vendor/autoload.php';
 
-use App\Database;
-use App\Test\InitialClass;
+use App\Controller\BlogController;
 
+$getID = 2;
+$getSlug = 'another-post';
 
-$db = new Database();
+$posts = new BlogController;
+var_dump($posts->list());
 
-$totalExpanded  = new InitialClass('12.50');
+$post_id = $posts->post($getID);
+var_dump($post_id);
 
-$totalExpanded->setName('Mr.Sam');
-var_dump($totalExpanded->name);
-
-$totalExpanded->setFee('12');
-var_dump($totalExpanded->getFee());
-
-var_dump($db);
-
-
+$slug = $posts->postBySlug($getSlug);
+var_dump($slug);
 
