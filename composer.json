@@ -1,8 +1,11 @@
 {
     "name": "samreaksa/init",
+    "license": "",
     "description": "php package by using composer",
     "require": {
-        "php": "^7.3"
+        "php": "^7.3",
+        "doctrine/orm": "^2.7",
+        "symfony/yaml": "^5.1"
     },
     "authors": [
         {

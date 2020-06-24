@@ -1,0 +1,2 @@
+composer require doctrine/orm
+composer require symfony/yaml

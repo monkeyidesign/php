@@ -1,21 +1,7 @@
-<?php
-require __DIR__.'/../vendor/autoload.php';
+<?php require "../bootstrap.php";
 
-use App\Database;
-use App\Test\InitialClass;
+$sql = $db->prepare('SELECT * FROM blog_post');
+$sql->execute();
+$posts = $sql->fetchAll();
 
-
-$db = new Database();
-
-$totalExpanded  = new InitialClass('12.50');
-
-$totalExpanded->setName('Mr.Sam');
-var_dump($totalExpanded->name);
-
-$totalExpanded->setFee('12');
-var_dump($totalExpanded->getFee());
-
-var_dump($db);
-
-
-
+var_dump($posts);
